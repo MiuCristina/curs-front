@@ -1,0 +1,36 @@
+<div class="row" ng-controller="productListCtrl as vm"
+     ng-hide="vms.data.error">
+    <div class="col-xs-3">
+        <a ng-click="vm.selectCategory()"
+           class="btn btn-block btn-default btn-lg">Home</a>
+        <a ng-repeat="item in vms.data.products | orderBy:'category' | unique:'category'"
+           ng-click="vm.selectCategory(item)" class=" btn btn-block btn-default btn-lg"
+           ng-class="vm.getCategoryClass(item)">
+            {{item}}
+        </a>
+    </div>
+    <div class="col-xs-9">
+        <div class="well"
+             ng-repeat="item in vms.data.products | filter:vm.categoryFilterFn | range:vm.selectedPage:vm.pageSize">
+            <h3>
+                <strong>{{item.name}}</strong>
+                <span class="pull-right label label-primary">
+                        {{item.price | currency}}
+                    </span>
+            </h3>
+            <button ng-click="vm.addProductToCart(item)"
+                    class="btn btn-success pull-right">
+                Add to cart
+            </button>
+            <span class="lead">{{item.description}}</span>
+        </div>
+        <div class="pull-right btn-group">
+            <a ng-repeat=
+                       "page in vms.data.products | filter:vm.categoryFilterFn | pageCount:vm.pageSize"
+               ng-click="vm.selectPage($index + 1)" class="btn btn-default"
+               ng-class="vm.getPageClass($index + 1)">
+                {{$index + 1}}
+            </a>
+        </div>
+    </div>
+</div>

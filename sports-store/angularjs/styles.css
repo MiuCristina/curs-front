@@ -1,0 +1,18 @@
+.borderless .remove-btn{
+    border: 0;
+}
+
+.logout-btn{
+    margin: 1rem 2rem;
+}
+
+.login-form{
+    min-width: 35vw;
+}
+
+.login-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}

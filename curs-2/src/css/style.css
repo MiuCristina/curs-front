@@ -1,0 +1,53 @@
+.center{
+    text-align: center;
+}
+
+.remove-btn{
+    font-size: 1.2rem;
+    padding: 0.3rem;
+}
+
+.selectedItem{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.selectedItem *{
+    margin: 0 1rem;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.input-add{
+    width:30%;
+    height: 3.3rem;
+    padding: 0 1rem;
+    margin-right: 2rem;
+    display: inline-block;
+}
+
+.list-item{
+    word-wrap: break-word;
+}
+
+.lists{
+    margin-top: 2rem;
+}
+
+.title{
+    margin: 4rem 0;
+}
+
+.list-dot{
+    margin-right: 1rem;
+}
+
+input[type="checkbox"] {
+    width:1.6rem;
+    height:1.6rem;
+    position: relative;
+    top: 0.3rem;
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-ng-app="toDoApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ToDo app</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body ng-controller="ToDoCtrl as vm">
+        <div class="container">
+            <h1 class="row center title" ng-if="vm.toDo && vm.toDo.user">{{vm.toDo.user}}'s to do list</h1>
+            <form>
+                <div class="form-group">
+                    <input id="input-add" class="form-control input-add" type="text" ng-model="vm.actionText">
+                    <button class="btn btn-info add-btn" ng-click="vm.add(vm.actionText)">Add to list</button>
+                </div>
+            </form>
+            <div class="row lists">
+                <div class="col-md-6">
+                    <h3 id="todo-title" class="center">To do</h3>
+                    <ul>
+                        <li ng-click="vm.selectItem(todo)"
+                            ng-class="{selectedItem: todo.selected}"
+                            ng-if="!todo.done"
+                            ng-repeat="todo in vm.toDo.todos | orderBy:'action'">
+                            <span class="glyphicon glyphicon-pencil list-dot" aria-hidden="true"></span>
+                            <span class="list-item">{{todo.action}}</span>
+                            <input ng-if="todo.selected" type="checkbox" ng-model="todo.done">
+                            <button ng-if="todo.selected" class="btn btn-danger remove-btn" ng-click="vm.remove(todo)">Remove</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 id="done-title" class="center">Done</h3>
+                    <ul>
+                        <li ng-click="vm.selectItem(todo)"
+                            ng-class="{selectedItem: todo.selected}"
+                            ng-if="todo.done"
+                            ng-repeat="todo in vm.toDo.todos | orderBy:'action'">
+                            <span class="glyphicon glyphicon-ok list-dot" aria-hidden="true"></span>
+                            <span class="list-item">{{todo.action}}</span>
+                            <input ng-if="todo.selected" type="checkbox" ng-model="todo.done">
+                            <button ng-if="todo.selected" class="btn btn-danger remove-btn" ng-click="vm.remove(todo)">Remove</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--{{vm.toDo.todos | json}}-->
+        </div>
+
+        <script type="text/javascript" src="lib/angular.min.js" ></script>
+        <script type="text/javascript" src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+        <script src="js/toDo.app.js"></script>
+        <script src="js/toDo.ctrl.js"></script>
+    </body>
+</html>

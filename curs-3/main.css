@@ -1,0 +1,194 @@
+html, body, h1, h2, h3, h4, ul, ol, li, p, a {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+body{
+    background: #555555 url(images/bg-tile.png);
+    font-family: Garamond, Serif;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: #8b0000;
+}
+
+p{
+    color: #444444;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+ol > li {
+    font-size: 20px;
+    margin-left:20px;
+}
+
+h1{
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 20px;
+    color: #333333;
+    margin-top: 15px;
+    border-bottom: 1px solid #cccccc;
+    font-weight: bold;
+}
+
+h3{
+    color: #777777;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+ul{
+    padding-left: 30px;
+}
+
+li{
+    margin-bottom: 5px;
+    line-height: 22px;
+}
+
+.nav{
+    padding: 0;
+    text-align: center;
+}
+
+.nav a{
+    color: #ee932a;
+}
+
+.nav li{
+    display: inline;
+    padding-right:20px;
+}
+
+.nav li:last-child{
+    padding-right: 0;
+}
+
+.day-time{
+    color: #444444;
+    text-decoration: underline;
+}
+.concert-location{
+    color: #888888;
+    text-decoration: underline;
+}
+
+.header, .content-section{
+    padding: 15px;
+}
+
+.content-section{
+    width: 450px;
+    margin: auto;
+    background: #000000 url(images/bg-content.png);
+}
+
+.album{
+    border: 2px dashed;
+    padding: 10px 5px;
+    margin-bottom: 5px;
+}
+
+.album img{
+    float: right;
+}
+
+.band-list h2{
+    border: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.band-list{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.band-list a{
+    text-decoration: none;
+    color: #ff2244;
+}
+
+.band-list li{
+    border: 1px solid #555555;
+    height: 120px;
+    display: flex;
+}
+
+.band-list img{
+    float: left;
+    padding-right: 15px;
+}
+
+.header img{
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.header{
+    background: #242424 url(images/bg-header.png) top center no-repeat;
+}
+
+.recording-now{
+    width: 440px;
+    height: 200px;
+    background: #ffffff url(images/prependers-recording.jpg) center center no-repeat;
+    border: 1px solid;
+    padding: 4px;
+}
+
+.recording-now p{
+    font-size: 50px;
+    color: #dddddd;
+    margin-top: 80px;
+    height: 50px;
+}
+
+h1, h2, h3{
+    font-family: Verdana, sans-serif;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+}
+
+input{
+    display: block;
+    margin-bottom: 15px;
+}
+
+textarea{
+    display: block;
+    margin-bottom: 15px;
+    width: 445px;
+    font-size: 20px;
+}
+
+input[type=submit]{
+    width: 165px;
+}
+
+input[type=checkbox], label[for=on-tour]{
+    display: inline;
+}
+
+input[type=text]{
+    width: 445px;
+    font-size: 20px;
+}

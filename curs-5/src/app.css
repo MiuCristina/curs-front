@@ -1,0 +1,16 @@
+span button{
+    width: 100%;
+}
+
+.incomplete-number-container{
+    display: flex;
+}
+
+.incomplete-number{
+    margin-top: 3rem;
+    display: flex;
+}
+
+h1 {
+    color: red;
+}

@@ -1,0 +1,46 @@
+body{
+    background-color: #5c5c5c;
+    color: #ffffff
+}
+
+header{
+    border-bottom: 1px solid #dddddd;
+}
+
+footer{
+    border-top: 1px dashed #dddddd;
+    padding: 10px 0;
+    text-align: center;
+}
+
+span{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer span{
+    color: #00ff00
+}
+
+.my-class{
+    color: #123456
+}
+#my-id{
+    font-size: 30px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+a[target="_blank"],
+a[target="_blank"]:visited,
+a[target="_blank"]:focus{
+    text-decoration: none;
+    color: red;
+
+}
+@media(max-width: 767px){
+    #my-id{
+        font-size: 30vw;
+    }
+}
